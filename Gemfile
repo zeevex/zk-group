@@ -4,8 +4,12 @@ source :rubygems
 #     gem 'zookeeper', '>= 1.0.0.beta.1'
 # end
 
-git 'git://github.com/slyphon/zk', :ref => '41bfd35' do
-  gem 'zk'
+#git 'git://github.com/slyphon/zk', :ref => '41bfd35' do
+#  gem 'zk'
+#end
+
+group :test, :development do
+  gem 'zk', :path => '/Users/Shared/squid/src/github/cluster/zk'
 end
 
 gem 'pry', :group => [:development, :test]
